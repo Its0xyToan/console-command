@@ -1,6 +1,6 @@
 {
   "name": "console-command",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple package to create commands that can be used in the console !",
   "main": "./build/index.js",
   "module": "./build/index.mjs",
