@@ -12,7 +12,7 @@ declare class Command {
         /** Executor of the command. */
         executor: string;
         /** Callback function to be executed when the command is invoked. */
-        callback: (req: Request) => void | null;
+        callback: (req: request) => void | null;
         /** Message to be sent when the command is executed. */
         message: string | null;
     };
@@ -23,7 +23,7 @@ declare class Command {
      */
     constructor(dataAsJson?: {
         executor?: string | null;
-        callback?: (req: Request) => void | null;
+        callback?: (req: request) => void | null;
         message?: string | null;
     });
     
@@ -39,7 +39,7 @@ declare class Command {
      * @param {Function} callback - Callback function to be set.
      * @returns {Command} The updated Command instance.
      */
-    setCallback(callback: (req: Request) => void): this;
+    setCallback(callback: (req: request) => void): this;
 
     /**
      * Sets the message for this command.
