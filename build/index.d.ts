@@ -1,3 +1,8 @@
+interface request {
+    executor: string,
+    reply: Function
+}
+
 /**
  * Represents a command.
  */
@@ -7,7 +12,7 @@ declare class Command {
         /** Executor of the command. */
         executor: string;
         /** Callback function to be executed when the command is invoked. */
-        callback: Function | null;
+        callback: (req: Request) => void | null;
         /** Message to be sent when the command is executed. */
         message: string | null;
     };
