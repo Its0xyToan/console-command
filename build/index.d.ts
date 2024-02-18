@@ -72,7 +72,7 @@ declare function registerCommand(command: Command): void;
 declare function registerCommands(...commands: Command[]): void;
 
 interface config {
-    customLogger: Function;
+    customLogger?: Function;
 }
 
 /**
@@ -85,6 +85,6 @@ interface config {
  * @param {Config} config
  * @returns {Promise<Object>} - Returns when ready !
  */
-declare function listenConsole(config: config): Promise<Object>;
+declare function listenConsole(config?: config): Promise<Object>;
 
 export { Command, listenConsole, registerCommand, registerCommands };
