@@ -78,7 +78,9 @@ let getCommand = (executor) => {
 
 let listenConsole = async (config) => {
 
-    let send = config ? config.customLogger : console.log;
+    let send = config ? 
+        config.customLogger ? config.customLogger : console.log 
+    : console.log;
 
     let y = process.openStdin();
 
