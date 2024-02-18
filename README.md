@@ -23,6 +23,8 @@ Install `console-command` with [npm](https://npmjs.com)
 
 ```javascript
 const Console = require("console-command");
+// or
+import * as Console from "console-command";
 
 // Create a new command !
 const my_command = new Console.Command()
