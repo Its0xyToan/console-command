@@ -66,9 +66,25 @@ declare class Command {
 declare function registerCommand(command: Command): void;
 
 /**
- * Listens for console input and executes corresponding commands.
- * @returns {Promise<void>} A Promise that resolves when console listening is initiated.
+ * Registers multiple commands.
+ * @param {Command[]} commands - The commands to register.
  */
-declare function listenConsole(): Promise<void>;
+declare function registerCommands(...commands: Command[]): void;
 
-export { Command, listenConsole, registerCommand };
+interface config {
+    customLogger: Function;
+}
+
+/**
+* @typedef {Object} Config
+* @property {Function} customLogger - The custom logger to use
+*/
+
+/**
+ * Listens for console input and executes corresponding commands.
+ * @param {Config} config
+ * @returns {Promise<Object>} - Returns when ready !
+ */
+declare function listenConsole(config: config): Promise<Object>;
+
+export { Command, listenConsole, registerCommand, registerCommands };

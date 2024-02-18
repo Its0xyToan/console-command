@@ -34,9 +34,28 @@ const my_command = new Console.Command()
         return req.reply("Callback of testing") // Just another name for console.log
     })
 
+const my_command2 = ...
+
+// Registering commands
+
 Console.registerCommand(my_command) // You need to register all your commands or it will not work /!\
+// Or if you have multiple commands:
+Console.registerCommands(my_command, my_command2, ...)
+
+
+// Listening the console
 
 Console.listenConsole() // This will create a new listener
+    .then(() => console.log("ConsoleCommand listening for commands !")) // On Ready
+
+// Or with custom logger:
+
+function logger(...args) {
+    // handle logging
+}
+
+listenConsole({ customLogger: logger }) // customLogger is a Function !
+    .then(() => console.log("ConsoleCommand listening for commands !")) // On ready
 ```
 
 And that's it !
@@ -49,5 +68,5 @@ And that's it !
 Thanks for using this little package I made !
 
 ## Todo
-* Custom Logger (console.log)
+* Custom Logger (console.log) 🟢
 * Subcommands

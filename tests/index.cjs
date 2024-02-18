@@ -1,7 +1,7 @@
-const { Command, listenConsole, registerCommand } = require("../index.cjs");
+const { Command, listenConsole, registerCommand, registerCommands } = require("../build/index.js");
 
 const command = new Command()
-    .setExecutor("testing")
+    .setExecutor("a")
     .setMessage("Message of testing")
     .setCallback((req) => {
         return req.reply("Callback of testing")
@@ -14,8 +14,10 @@ const command2 = new Command()
         return req.reply("aaaaaaaaaaaaaaaaaaaa")
     })
 
-registerCommand(command)
-registerCommand(command2)
+registerCommands(command, command2)
 
+function logger(...args) {
+    console.log(...args)
+}
 
-listenConsole()
+listenConsole({ customLogger: logger }).then(() => console.log("ConsoleCommand listening for commands !"))
