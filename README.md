@@ -6,7 +6,7 @@ The best package to create commands in the console !
 
 ## Installation 🚀
 
-Install `console-command` with [npm](https://npmjs.com)
+Install `console-command` with [npm](https://www.npmjs.com/package/console-command)
 
 ```bash
   npm install console-command
