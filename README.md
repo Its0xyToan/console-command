@@ -17,7 +17,7 @@ Install `console-command` with [npm](https://www.npmjs.com/package/console-comma
 
 - 🔄️ Callback when command is used 
 - 📨 Message when command is used
-- 🍔 Lightweight (aroud 270 lines in total, 3 files including index.d.ts)
+- 🍔 Lightweight (around 270 lines in total, 3 files including index.d.ts)
 - 🚀 Simple to use !
 ## Usage/Examples 🔨
 
@@ -47,3 +47,7 @@ And that's it !
 - [@Its0xyToan](https://www.github.com/Its0xyToan)
 
 Thanks for using this little package I made !
+
+## Todo
+* Custom Logger (console.log)
+* Subcommands
