@@ -1,0 +1,39 @@
+{
+  "name": "console-command",
+  "version": "1.0.0",
+  "description": "A simple package to create commands that can be used in the console !",
+  "type": "module",
+
+  "main": "./build/index.js",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "exports": {
+    "types": "./build/index.d.ts",
+    "import": "./build/index.mjs",
+    "require": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "LICENSE",
+    "README"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Its0xyToan/console-command.git"
+  },
+  "keywords": [
+    "console",
+    "commands",
+    "consolecommands",
+    "command"
+  ],
+  "author": "Its0xyToan",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Its0xyToan/console-command/issues"
+  },
+  "homepage": "https://github.com/Its0xyToan/console-command#readme"
+}
